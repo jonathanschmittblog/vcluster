@@ -44,7 +44,7 @@ data:
       {{- end}}
       {{- if .release }}
       timeout: {{ .timeout | default "120s" | quote }}
-      releaseName: {{ template "vcluster.name" . }}
+      releaseName: {{ .release.name . }}
       releaseNamespace: {{ .release.namespace }}
       {{- end }}
   {{- end }}
